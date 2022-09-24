@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+                {% if todo.status == 1 %}
+                    <tr>
+                        <td><s>{{ todo.task }}</s></td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td>{{ todo.task }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

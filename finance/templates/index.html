@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {%- set ns = namespace(sum=0) -%}
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.shares }}</td>
+                <td>{{ stock.price | usd}}</td>
+                <td>{{ stock.total | usd}}</td>
+                {%- set ns.sum = stock.total -%}
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash | usd }}</td>
+            </tr>
+            <tr>
+                <td>TOTAL</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash + ns.sum}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

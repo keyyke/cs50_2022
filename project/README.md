@@ -1,0 +1,14 @@
+# TODO APP
+#### Video Demo:  <https://youtu.be/h7wuS89A58k>
+#### Description:
+##### What is this?
+-- Japanese versino --<br>
+これはとてもシンプルなTODOのWebアプリです。世の中には数多くのTODOアプリがあります。しかし、それらはあまりにも多くの機能を持っています。例えば、色を変えたり、タスクを共有したり、締め切りが迫っているときにアラートを出したり。便利な反面、複雑で分かりにくい。そこで、このアプリを作りました。 とてもシンプルなので、すぐに使いこなせるようになります。<br>
+このアプリには2つのページがあります。まず、インデックス・ページがあります。このページで、ユーザーは自分のタスクを追加したり、未完了のタスクをチェックすることができます。また、一つのタスクが終了したら、「終了」ボタンを押します。そうすれば、そのタスクは消去されます。時には、すべてのタスクをチェックしたい場合もあるでしょう。その場合は、"all "ページに移動してください。このページには、一つの表があります。このページには、これから行うタスクだけでなく、すでに行ったタスクもすべて表示されます。<br>
+今回実装した以外の機能の実装も考えました。例えば、完了したタスクを未完了に戻すことや、締め切りを設定することなどです。しかし、今回のアプリではいかに最小限の昨日ですぐに誰でも使えるということに焦点をおいていたため今回は実装しないことにしました。<br>
+シンプルにすることを意識したため機能を最小限に絞った。しかし、シンプル過ぎたとも思う。例えばタスクを誤って入力した場合に消去する方法がない。誤って作成したタスクも終了ボタンで削除すれば問題ないと考えているが、完了したタスクと誤って作成したタスクは見分けられた方が便利である。したがって、タスクには完了以外に消去というボタンを作成するべきだった。また、誤って完了にしたタスクを戻す術がない。完了から未完了に戻す機能も実装するべきだったかもしれない。<br>
+-- English versino --<br>
+This is very simple TODO web app. There are a large number of TODO app in the world. However, they hae too much functions. For example, users can change color, share their tasks or set alert when the deadline is looming. It is useful, on the other hand, it is confusing because it is complex. That is why, I made this app. User can be master of this app soon because it is very simple.<br>
+This app has two pages. Fist, users will see index page. On this page, users can add their tasks and check all tasks which has not been done. Moreover, when they finish one task, they shold press the "finish" botton. Then, the task will be disappreaed. Sometimes, users may want to check every task. Then, they should go to to the "all" page. There is one table on this page. Users can see all tasks not only they will do but also they have already done.<br>
+We have also considered implementing features other than those implemented in this project. For example, we thought about setting deadlines, or resetting completed tasks to "Uncompleted". However, since the focus of this application was to be usable by anyone immediately with a minimum of yesterday's work, we decided not to implement them this time.<br>
+We were conscious of keeping it simple, so we reduced the functions to a minimum. However, I think it was too simple. For example, there is no way to delete a task if it is entered incorrectly. We believe that there is no problem with deleting a task created by mistake by clicking the Exit button, but it would be more convenient to be able to distinguish between a completed task and a task created by mistake. Therefore, we should have created a "delete" button for tasks in addition to the "complete" button. Also, there is no way to revert a task that was inadvertently marked as completed. Perhaps a function to return a task from completed to uncompleted should have been implemented.<br>

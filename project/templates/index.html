@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post" class="mb-4">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control" id="task" name="task" placeholder="Input TODO!" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Task</button>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tasks</th>
+                <th>finish?</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.task }}</td>
+                <td>
+                    <form action="finish_task" method="post" class="mb-4">
+                        <input type="hidden" id="id" name="id" value="{{ todo.id }}">
+                        <button class="btn btn-primary" type="submit" value="1">Finish</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
